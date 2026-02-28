@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вход оператора</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body class="page-bg">
+    <main class="shell">
+      <div class="mock-window">
+        <div class="mock-top">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="mock-body">
+          <section class="card auth-card">
+            <h1>Login</h1>
+            <p class="muted">Вход только для сотрудников клиники</p>
+
+            <form id="loginForm" novalidate>
+              <label class="field-label" for="email">
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="img">
+                    <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Zm0 2v.4l8 4.8 8-4.8V8Zm0 2.7V16h16v-5.3l-7.3 4.4a1 1 0 0 1-1 0Z"></path>
+                  </svg>
+                </span>
+                Электронная почта
+              </label>
+              <input id="email" name="email" type="email" placeholder="test@example.com" required />
+              <p class="error" data-error-for="email"></p>
+
+              <label class="field-label" for="password">
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="img">
+                    <path d="M6 10V8a6 6 0 1 1 12 0v2h1a1 1 0 0 1 1 1v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a1 1 0 0 1 1-1Zm2 0h8V8a4 4 0 0 0-8 0Z"></path>
+                  </svg>
+                </span>
+                Пароль
+              </label>
+              <input id="password" name="password" type="password" minlength="8" required />
+              <p class="error" data-error-for="password"></p>
+
+              <button id="loginBtn" type="submit">Войти</button>
+              <p id="loginMessage" class="message"></p>
+            </form>
+
+            <div class="nav-links">
+              <a class="link-btn secondary" href="/">На главную</a>
+              <a class="link-btn" href="/admin">Заявки</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/config.js"></script>
+    <script src="/static/login.js"></script>
+  </body>
+</html>

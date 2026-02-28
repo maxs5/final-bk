@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заявки клиники</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body class="page-bg">
+    <main class="shell admin-shell">
+      <div class="mock-window mock-window-wide">
+        <div class="mock-top">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="mock-body">
+          <section class="card table-card">
+            <div class="toolbar">
+              <h1>Заявки с формы</h1>
+              <button id="logoutBtn" class="secondary" type="button">Выйти</button>
+            </div>
+
+            <div class="controls">
+              <div class="search-wrap">
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="img">
+                    <path d="M10.5 3a7.5 7.5 0 1 1 5.3 12.8l3.4 3.4-1.4 1.4-3.4-3.4A7.5 7.5 0 0 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"></path>
+                  </svg>
+                </span>
+                <input id="searchInput" type="search" placeholder="Поиск по ФИО, телефону или проблеме" />
+              </div>
+
+              <select id="sortBy">
+                <option value="createdAt">По дате</option>
+                <option value="fullName">По ФИО</option>
+                <option value="phone">По телефону</option>
+              </select>
+
+              <select id="sortOrder">
+                <option value="desc">Сначала новые</option>
+                <option value="asc">Сначала старые</option>
+              </select>
+
+              <select id="limit">
+                <option value="5">5 на странице</option>
+                <option value="10" selected>10 на странице</option>
+                <option value="20">20 на странице</option>
+              </select>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Дата и время</th>
+                    <th>ФИО</th>
+                    <th>Телефон</th>
+                    <th>Проблема</th>
+                  </tr>
+                </thead>
+                <tbody id="requestsBody"></tbody>
+              </table>
+            </div>
+
+            <div class="pagination">
+              <button id="prevPage" class="secondary" type="button">Назад</button>
+              <span id="pageInfo">Страница 1</span>
+              <button id="nextPage" class="secondary" type="button">Вперед</button>
+            </div>
+
+            <p id="tableMessage" class="message"></p>
+
+            <div class="nav-links nav-links-left">
+              <a class="link-btn secondary" href="/">На главную</a>
+              <a class="link-btn" href="/login">Вход оператора</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/config.js"></script>
+    <script src="/static/admin.js"></script>
+  </body>
+</html>

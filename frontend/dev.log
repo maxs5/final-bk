@@ -1,0 +1,6 @@
+
+> clinic-frontend@1.0.0 dev
+> node server.js
+
+Frontend started on http://localhost:5173
+Завершить выполнение пакетного файла [Y(да)/N(нет)]? 
